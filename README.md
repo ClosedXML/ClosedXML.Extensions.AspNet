@@ -1,6 +1,14 @@
 # ClosedXML.Extensions.AspNet
 ASP.NET Extensions for ClosedXML
 
+## Install ClosedXML via NuGet
+
+To install ClosedXML.Extensions.AspNet, run the following command in the Package Manager Console
+
+```
+PM> Install-Package ClosedXML.Extensions.AspNet
+```
+
 ## Usage
 There are two extension methods: one for `HttpResponse` and one for `XLWorkbook`. Both deliver the relevant `ClosedXML` workbook to the response stream.
 
