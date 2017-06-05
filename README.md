@@ -1,7 +1,7 @@
 # ClosedXML.Extensions.AspNet
 ASP.NET Extensions for ClosedXML
 
-## Install ClosedXML via NuGet
+## Install via NuGet
 
 To install ClosedXML.Extensions.AspNet, run the following command in the Package Manager Console
 
