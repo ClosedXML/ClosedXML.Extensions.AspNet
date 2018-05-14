@@ -1,6 +1,12 @@
 ﻿using ClosedXML.Excel;
 using System.IO;
+
+#if _NETFRAMEWORK_
 using System.Web;
+#else
+using Microsoft.AspNetCore.Http;
+#endif
+
 
 namespace ClosedXML.Extensions
 {
@@ -16,13 +22,17 @@ namespace ClosedXML.Extensions
             using (var memoryStream = new MemoryStream())
             {
                 workbook.SaveAs(memoryStream);
-                memoryStream.WriteTo(httpResponse.OutputStream);
+                memoryStream.WriteTo(httpResponse.BodyStream());
                 memoryStream.Close();
             }
 
             httpResponse.End();
         }
+    }
 
+
+    public static class XLWorkbookExtensions
+    {
         public static void DeliverToHttpResponse(this XLWorkbook workbook, HttpResponse httpResponse, string fileName, string contentType = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
         {
             httpResponse.Clear();
@@ -33,7 +43,7 @@ namespace ClosedXML.Extensions
             using (var memoryStream = new MemoryStream())
             {
                 workbook.SaveAs(memoryStream);
-                memoryStream.WriteTo(httpResponse.OutputStream);
+                memoryStream.WriteTo(httpResponse.BodyStream());
                 memoryStream.Close();
             }
 
