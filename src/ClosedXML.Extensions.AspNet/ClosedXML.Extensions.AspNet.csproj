@@ -3,16 +3,20 @@
   <PropertyGroup>
     <TargetFrameworks>netcoreapp2.0;net45;net46</TargetFrameworks>
     <LangVersion>7.2</LangVersion>
-    <Version>0.2.0</Version>
+    <Version>0.2.1</Version>
     <Authors>Francois Botha</Authors>
     <Company />
     <Product>ClosedXML.Extensions.AspNet</Product>
     <Description>ASP.NET extensions for ClosedXML</Description>
     <Copyright>MIT</Copyright>
     <PackageLicenseUrl>https://github.com/ClosedXML/ClosedXML.Extensions.AspNet/blob/master/LICENSE</PackageLicenseUrl>
-    <PackageProjectUrl>https://github.com/ClosedXML.Extensions.AspNet/ClosedXML</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/ClosedXML/ClosedXML.Extensions.AspNet</PackageProjectUrl>
     <RepositoryUrl>https://github.com/ClosedXML/ClosedXML.Extensions.AspNet</RepositoryUrl>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)'=='Release'">
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(TargetFramework)' == 'netcoreapp2.0' ">
@@ -44,6 +48,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="ClosedXML" Version="0.92.1" />
+    <PackageReference Include="ClosedXML" Version="0.93.0" />
   </ItemGroup>
 </Project>
