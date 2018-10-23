@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFrameworks>netcoreapp2.0;net45;net46</TargetFrameworks>
     <LangVersion>7.2</LangVersion>
-    <Version>0.2.1</Version>
+    <Version>0.2.2</Version>
     <Authors>Francois Botha</Authors>
     <Company />
     <Product>ClosedXML.Extensions.AspNet</Product>
@@ -32,7 +32,7 @@
   </PropertyGroup>
 
   <ItemGroup Condition=" '$(TargetFramework)' == 'netcoreapp2.0' ">
-    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.8" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.9" />
   </ItemGroup>
 
   <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
