@@ -13,6 +13,8 @@
     <PackageProjectUrl>https://github.com/ClosedXML/ClosedXML.Extensions.AspNet</PackageProjectUrl>
     <RepositoryUrl>https://github.com/ClosedXML/ClosedXML.Extensions.AspNet</RepositoryUrl>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>ClosedXML.Extensions.AspNet.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)'=='Release'">
